@@ -18,6 +18,9 @@ echo "--------------------------------------------------------"
 echo "        STARTING PAYMENTER & CITADEL UPDATE             "
 echo "--------------------------------------------------------"
 
+echo "--> Forcing fresh pull of Paymenter base image..."
+docker rmi ghcr.io/paymenter/paymenter:latest --force
+
 echo "--> Bringing containers up..."
 docker compose up -d --build
 
