@@ -12,7 +12,7 @@ dietpi@DietPi ~/Paymenter>
 This theme is not free, you should buy the Citadel theme [here](https://builtbybit.com/resources/citadel-theme-paymenter.82217/)
 Im not associated with Citadel, just a consumer that love FOSS and love help the community to have good solutions <3
 
-The theme itself have an issue in `/app/themes/citadel/views/components/navigation/footer.blade.php` and you will require to replace the full line that contains "GLOB_BRACE" with this:
+The theme itself have an issue in `/Extras/Citadel/themes/citadel/views/components/navigation/footer.blade.php` and you will require to replace the full line that contains "GLOB_BRACE" with this:
 ```php
                                 $files = array_merge(
                                     glob($assetsPath . '/gateway*.png') ?: [],
