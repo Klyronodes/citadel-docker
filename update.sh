@@ -37,6 +37,14 @@ echo "---- INSTALLING THEME: CITADEL ----"
 docker compose run --rm asset-builder npm run build citadel
 
 echo ""
+echo "---- CLEARING CACHE ----"
+docker compose exec paymenter php artisan cache:clear
+docker compose exec paymenter php artisan config:clear
+docker compose exec paymenter php artisan route:clear
+docker compose exec paymenter php artisan view:clear
+docker compose exec paymenter php artisan optimize:clear
+
+echo ""
 echo "---- FINALIZING ----"
 docker compose restart paymenter
 
